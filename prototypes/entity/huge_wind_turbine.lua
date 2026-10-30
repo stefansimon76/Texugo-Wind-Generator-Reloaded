@@ -1,8 +1,58 @@
+local animation = {
+	stripes = {
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh1.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		},
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh2.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		},
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh3.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		},
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh4.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		},
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh5.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		},
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh6.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		},
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh7.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		},
+		{
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/windh8.png',
+			width_in_frames = 2,
+			height_in_frames = 3
+		}
+	},
+	width = 800,
+	height = 550,
+	scale = 1.1,
+	frame_count = 44,
+	shift = {4.8, -4.25}
+}
+
 data:extend{
 	{
 		type = 'generator',
 		name = 'texugo-wind-turbine3',
-		icon = '__Texugo_windgenerator__/graphics/windh_icon.png',
+		icon = '__Texugo-Wind-Generator-Reloaded__/graphics/windh_icon.png',
 		icon_size = 32,
 		flags = {'placeable-neutral', 'player-creation'},
 		minable = {mining_time = 2, result = 'texugo-wind-turbine3'},
@@ -27,119 +77,23 @@ data:extend{
 			}
 		},
 		fast_replaceable_group = 'texugo-wind-turbine3',
-		collision_mask = {'item-layer', 'object-layer', 'water-tile'},
+		collision_mask = {layers = {item = true, object = true, water_tile = true}},
 		collision_box = {{-7, -7}, {7, 7}},
 		selection_box = {{-7, -7}, {7, 7}},
 		fluid_box = {
-			base_area = 1,
-			height = 2,
-			base_level = -1,
+			volume = 200,
 			pipe_connections = {},
 			production_type = 'input-output',
-			filter = 'steam',
-			minimum_temperature = 0.0
+			filter = 'steam'
 		},
 		energy_source = {
 			type = 'electric',
 			usage_priority = 'primary-output'
 		},
-		horizontal_animation = {
-			stripes = {
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh1.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh2.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh3.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh4.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh5.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh6.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh7.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh8.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				}
-			},
-			width = 800,
-			height = 550,
-			scale = 1.1,
-			frame_count = 44,
-			shift = {4.8, -4.25}
-		},
-		vertical_animation = {
-			stripes = {
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh1.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh2.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh3.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh4.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh5.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh6.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh7.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				},
-				{
-					filename = '__Texugo_windgenerator__/graphics/windh8.png',
-					width_in_frames = 2,
-					height_in_frames = 3
-				}
-			},
-			width = 800,
-			height = 550,
-			scale = 1.1,
-			frame_count = 44,
-			shift = {4.8, -4.25}
+		two_direction_only = true,
+		pictures = {
+			north = {animation = animation},
+			east = {animation = animation}
 		},
 		working_sound = {
 			sound = {
@@ -148,14 +102,14 @@ data:extend{
 			},
 			match_speed_to_activity = true
 		},
-		min_perceived_performance = 1.0,
-		performance_to_sound_speedup = 0.2
+		perceived_performance = {minimum = 1.0}
 	},
 	{
 		type = 'electric-pole',
 		name = 'twt-electric-pole3',
 		icon = '__base__/graphics/icons/copper-cable.png',
-		icon_size = 32,
+		icon_size = 64,
+		hidden = true,
 		flags = {'not-deconstructable', 'not-on-map', 'placeable-off-grid', 'not-repairable', 'not-blueprintable'},
 		selectable_in_game = false,
 		max_health = 1,
@@ -164,7 +118,7 @@ data:extend{
 		maximum_wire_distance = 18,
 		supply_area_distance = 1,
 		pictures = {
-			filename = '__Texugo_windgenerator__/graphics/nothing.png',
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/nothing.png',
 			priority = 'low',
 			width = 1,
 			height = 1,
@@ -179,7 +133,7 @@ data:extend{
 			}
 		},
 		radius_visualisation_picture = {
-			filename = '__Texugo_windgenerator__/graphics/nothing.png',
+			filename = '__Texugo-Wind-Generator-Reloaded__/graphics/nothing.png',
 			width = 1,
 			height = 1,
 			priority = 'low'

@@ -2,7 +2,7 @@ data:extend{
 	{
 		type = 'item',
 		name = 'texugo-wind-turbine',
-		icon = '__Texugo_windgenerator__/graphics/windw_icon.png',
+		icon = '__Texugo-Wind-Generator-Reloaded__/graphics/windw_icon.png',
 		icon_size = 32,
 		group = 'logistics',
 		subgroup = 'energy',
@@ -13,7 +13,7 @@ data:extend{
 	{
 		type = 'item',
 		name = 'texugo-wind-turbine2',
-		icon = '__Texugo_windgenerator__/graphics/winds_icon.png',
+		icon = '__Texugo-Wind-Generator-Reloaded__/graphics/winds_icon.png',
 		icon_size = 32,
 		group = 'logistics',
 		subgroup = 'energy',
@@ -24,7 +24,7 @@ data:extend{
 	{
 		type = 'item',
 		name = 'texugo-wind-turbine3',
-		icon = '__Texugo_windgenerator__/graphics/windh_icon.png',
+		icon = '__Texugo-Wind-Generator-Reloaded__/graphics/windh_icon.png',
 		icon_size = 32,
 		group = 'logistics',
 		subgroup = 'energy',
@@ -35,7 +35,7 @@ data:extend{
 	{
         type = "item",
         name = "texugo-wind-turbine4",
-        icon = "__Texugo_windgenerator__/graphics/titanicicon.png",
+        icon = "__Texugo-Wind-Generator-Reloaded__/graphics/titanicicon.png",
         icon_size = 64,
         group = "logistics",
         subgroup = "energy",

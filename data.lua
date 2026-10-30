@@ -12,6 +12,6 @@ data.raw.generator['texugo-wind-turbine2'].effectivity = settings.startup['texug
 data.raw.generator['texugo-wind-turbine3'].effectivity = settings.startup['texugo-wind-power'].value * 12.1
 data.raw.generator['texugo-wind-turbine4'].effectivity = settings.startup['texugo-wind-power'].value * 121
 
-if mods['bobelectronics'] then 
+if mods['bobelectronics'] and bobmods and bobmods.lib and bobmods.lib.recipe then
 	bobmods.lib.recipe.replace_ingredient('texugo-wind-turbine', 'electronic-circuit', 'basic-circuit-board')
 end

@@ -2,7 +2,7 @@ data:extend{
 	{
 		type = 'technology',
 		name = 'texugo-wind-turbine2',
-		icon = '__Texugo_windgenerator__/graphics/winds_tec.png',
+		icon = '__Texugo-Wind-Generator-Reloaded__/graphics/winds_tec.png',
 		icon_size = 128,
 		prerequisites = {'electric-engine', 'electric-energy-distribution-2'},
 		effects = {
@@ -24,9 +24,9 @@ data:extend{
 	{
 		type = 'technology',
 		name = 'texugo-wind-turbine3',
-		icon = '__Texugo_windgenerator__/graphics/windh_tec.png',
+		icon = '__Texugo-Wind-Generator-Reloaded__/graphics/windh_tec.png',
 		icon_size = 128,
-		prerequisites = {'robotics', 'advanced-electronics-2', 'texugo-wind-turbine2'},
+		prerequisites = {'robotics', 'processing-unit', 'texugo-wind-turbine2'},
 		effects = {
 			{
 				type = 'unlock-recipe',
@@ -47,7 +47,7 @@ data:extend{
 	{
         type = "technology",
         name = "texugo-wind-turbine4",
-        icon = "__Texugo_windgenerator__/graphics/titanictech.png",
+        icon = "__Texugo-Wind-Generator-Reloaded__/graphics/titanictech.png",
         icon_size = 128,
         prerequisites = {"space-science-pack", "texugo-wind-turbine3"},
         effects = {

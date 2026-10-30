@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 29. 10. 2026
+  Changes:
+    - Continued as "Texugo Wind Generator Reloaded" (mod name Texugo-Wind-Generator-Reloaded). Original mod by Texugo Maldito
+    - Updated to Factorio 2.1
+    - Rocket control unit in the titanic wind turbine recipe replaced by processing units (the item was removed in Factorio 2.0)
+    - "Advanced electronics 2" prerequisite replaced by "Processing unit"
+    - Note: with Krastorio 2 the turbines produce 2.5 times the listed output, because Krastorio 2 raises the heat capacity of steam (0.2kJ -> 0.5kJ)
+    - Turbines built by space platforms and by other mods (script_raised_built) also get their hidden pole
+    - Hidden poles are rebuilt when the mod is updated
+    - Added German translation
+---------------------------------------------------------------------------------------------------
 Version: 0.18.4
 Date: 6. 8. 2020
   Changes:
